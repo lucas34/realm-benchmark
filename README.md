@@ -18,6 +18,11 @@ Executed on Samsung Galaxy S3 with 10 iterations.
 
 * [Lucas Nelaupe](http://www.lucas-nelaupe.fr/) - <https://github.com/lucas34>
 
+## More info
+
+* [RealM](https://github.com/realm/realm-java/) 
+* [GreenDao](https://github.com/greenrobot/greenDAO/) 
+
 ## License
 
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
