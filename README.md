@@ -11,7 +11,7 @@ Executed on Samsung Galaxy S3 with 10 iterations.
 
 ### Insert
 
-![Result](https://github.com/lucas34/realm-benchmark/blob/master/results/insert_50k.png)
+![Result](https://github.com/lucas34/realm-benchmark/blob/master/results/insert_50k_small.png)
 ![Result](https://github.com/lucas34/realm-benchmark/blob/master/results/insert_100k.png)
 
 ## Contributor
