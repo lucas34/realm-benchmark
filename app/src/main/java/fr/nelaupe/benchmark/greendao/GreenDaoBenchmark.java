@@ -60,17 +60,15 @@ public class GreenDaoBenchmark implements BenchmarkExecutor {
 
         final GreenPersonDao greenPersonDao = session.getGreenPersonDao();
 
+        GreenPerson[] persons = new GreenPerson[iteration];
+        for (int i = 0; i < iteration; i++) {
+            GreenPerson person = new GreenPerson();
+            person.setEmail(dataFactory.getEmailAddress());
+            persons[i] = person;
+        }
+
         long start = System.currentTimeMillis();
-        session.runInTx(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < iteration; i++) {
-                    GreenPerson person = new GreenPerson();
-                    person.setEmail(dataFactory.getEmailAddress());
-                    greenPersonDao.insert(person);
-                }
-            }
-        });
+        greenPersonDao.insertInTx(persons);
         return System.currentTimeMillis() - start;
     }
 

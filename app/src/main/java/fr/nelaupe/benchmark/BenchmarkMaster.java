@@ -9,6 +9,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.nelaupe.benchmark.active.ActiveAndroidBenchmark;
 import fr.nelaupe.benchmark.greendao.GreenDaoBenchmark;
 import fr.nelaupe.benchmark.loop.LoopBenchmark;
 import fr.nelaupe.benchmark.loop.LoopOptBenchmark;
@@ -30,11 +31,12 @@ public class BenchmarkMaster {
     }
 
     public void run() {
-        runBenchmark(new RealMBenchmark());
-        runBenchmark(new GreenDaoBenchmark());
+//        runBenchmark(new SugarBenchmark());
+        runBenchmark(new ActiveAndroidBenchmark());
         runBenchmark(new LoopBenchmark());
         runBenchmark(new LoopOptBenchmark());
-        runBenchmark(new LoopOptBenchmark());
+        runBenchmark(new RealMBenchmark());
+        runBenchmark(new GreenDaoBenchmark());
     }
 
     public void runBenchmark(BenchmarkExecutor benchmark) {

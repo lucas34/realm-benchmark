@@ -23,6 +23,7 @@ public class RealMBenchmark implements BenchmarkExecutor {
 
     @Override
     public void setup(Context context) {
+
         RealmConfiguration realmConfig = new RealmConfiguration.Builder(context).build();
         realm = Realm.getInstance(realmConfig);
 
