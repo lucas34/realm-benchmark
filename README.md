@@ -1,6 +1,8 @@
 # RealM / GreenDao benchmark
 
 Executed on Samsung Galaxy S3 with 10 iterations.
+RealM version 0.90.1
+GreenDao 2.2.0
 
 ## Results
 
@@ -18,7 +20,7 @@ Executed on Samsung Galaxy S3 with 10 iterations.
 
 * [Lucas Nelaupe](http://www.lucas-nelaupe.fr/) - <https://github.com/lucas34>
 
-## More info
+## Credits
 
 * [RealM](https://github.com/realm/realm-java/) 
 * [GreenDao](https://github.com/greenrobot/greenDAO/) 
