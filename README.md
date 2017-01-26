@@ -13,7 +13,7 @@ Time in MS. (Lower is better)
 |        |  RealM |  ObjectBox |  For loop | Optimised For loop |
 |--------|--------|------------|-----------|--------------------|
 | Insert |  1530  |     **1227**   |    N/d    |         N/d        |
-| Search |     **10 **  |     14     |     18    |          17        |
+| Search |     **10**  |     14     |     18    |          17        |
 
 
 Executed on Samsung Galaxy S3. Average on 10 iterations.
@@ -22,8 +22,8 @@ Time in MS. (Lower is better)
 
 |        |  RealM |  ObjectBox |  For loop | Optimised For loop |
 |--------|--------|------------|-----------|--------------------|
-| Insert |  3562  |     **2906 **    |    N/d   |         N/d       |
-| Search |     **31 **  |     45     |     49    |          46        |
+| Insert |  3562  |     **2906**    |    N/d   |         N/d       |
+| Search |     **31**  |     45     |     49    |          46        |
 
 ## Old Results
 
