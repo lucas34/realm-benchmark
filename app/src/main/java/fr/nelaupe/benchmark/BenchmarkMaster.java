@@ -9,9 +9,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.nelaupe.benchmark.greendao.GreenDaoBenchmark;
-import fr.nelaupe.benchmark.loop.LoopBenchmark;
-import fr.nelaupe.benchmark.loop.LoopOptBenchmark;
+import fr.nelaupe.benchmark.objectbox.ObjectBoxBenchmark;
 import fr.nelaupe.benchmark.realm.RealMBenchmark;
 
 /**
@@ -22,7 +20,7 @@ import fr.nelaupe.benchmark.realm.RealMBenchmark;
 public class BenchmarkMaster {
 
     private static final int ITERATIONS = 50;
-    private static final int NUMBER_ENTITIES = 50000;
+    private static final int NUMBER_ENTITIES = 20000;
     private Context context;
 
     public BenchmarkMaster(Context context) {
@@ -30,11 +28,11 @@ public class BenchmarkMaster {
     }
 
     public void run() {
+//        runBenchmark(new GreenDaoBenchmark());
+//        runBenchmark(new LoopBenchmark());
+//        runBenchmark(new LoopOptBenchmark());
+        runBenchmark(new ObjectBoxBenchmark());
         runBenchmark(new RealMBenchmark());
-        runBenchmark(new GreenDaoBenchmark());
-        runBenchmark(new LoopBenchmark());
-        runBenchmark(new LoopOptBenchmark());
-        runBenchmark(new LoopOptBenchmark());
     }
 
     public void runBenchmark(BenchmarkExecutor benchmark) {

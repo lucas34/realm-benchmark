@@ -10,7 +10,6 @@ import org.fluttercode.datafactory.impl.DataFactory;
 import fr.nelaupe.benchmark.BenchmarkExecutor;
 import io.realm.Case;
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
 
 /**
  * Created with IntelliJ
@@ -23,11 +22,11 @@ public class RealMBenchmark implements BenchmarkExecutor {
 
     @Override
     public void setup(Context context) {
-        RealmConfiguration realmConfig = new RealmConfiguration.Builder().build();
-        realm = Realm.getInstance(realmConfig);
+        Realm.init(context);
+        realm = Realm.getDefaultInstance();
 
         realm.beginTransaction();
-        realm.delete(RealMPerson.class);
+        realm.deleteAll();
         realm.commitTransaction();
     }
 
