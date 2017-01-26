@@ -1,14 +1,13 @@
-# RealM / GreenDao benchmark
-
+# RealM / ObjectBox benchmark
 
 ## Results
 
-RealM version 2.3.0
-ObjectBox 0.9.6
+RealM version 2.3.0<br/>
+ObjectBox 0.9.6<br/>
 
-Executed on Samsung Galaxy S3. Average on 50 iterations.
-Item inserted : 20K
-Time in MS. (Lower is better)
+Executed on Samsung Galaxy S3. Average on 50 iterations.<br/>
+Item inserted : 20K<br/>
+Time in MS. (Lower is better)<br/>
 
 |        |  RealM |  ObjectBox |  For loop | Optimised For loop |
 |--------|--------|------------|-----------|--------------------|
@@ -16,9 +15,9 @@ Time in MS. (Lower is better)
 | Search |     **10**  |     14     |     18    |          17        |
 
 
-Executed on Samsung Galaxy S3. Average on 10 iterations.
-Item inserted : 50K
-Time in MS. (Lower is better)
+Executed on Samsung Galaxy S3. Average on 10 iterations.<br/>
+Item inserted : 50K<br/>
+Time in MS. (Lower is better)<br/>
 
 |        |  RealM |  ObjectBox |  For loop | Optimised For loop |
 |--------|--------|------------|-----------|--------------------|
@@ -27,9 +26,9 @@ Time in MS. (Lower is better)
 
 ## Old Results
 
-Executed on Samsung Galaxy S3 with 10 iterations.
-RealM version 0.90.1
-GreenDao 2.2.0
+Executed on Samsung Galaxy S3 with 10 iterations.<br/>
+RealM version 0.90.1<br/>
+GreenDao 2.2.0<br/>
 
 ### Search
 
