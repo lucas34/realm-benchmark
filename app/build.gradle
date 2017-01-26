@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         applicationId "fr.nelaupe.myapplication"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -25,6 +26,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'org.fluttercode.datafactory:datafactory:0.8'
-    compile 'org.greenrobot:greendao:2.2.0'
-    compile 'org.greenrobot:greendao-generator:2.2.0'
+    compile 'org.greenrobot:greendao:3.2.0'
 }

@@ -23,7 +23,7 @@ public class RealMBenchmark implements BenchmarkExecutor {
 
     @Override
     public void setup(Context context) {
-        RealmConfiguration realmConfig = new RealmConfiguration.Builder(context).build();
+        RealmConfiguration realmConfig = new RealmConfiguration.Builder().build();
         realm = Realm.getInstance(realmConfig);
 
         realm.beginTransaction();
@@ -39,9 +39,10 @@ public class RealMBenchmark implements BenchmarkExecutor {
 
         realm.beginTransaction();
         for (int i = 0; i < iteration; i++) {
-            RealMPerson person = realm.createObject(RealMPerson.class);
+            RealMPerson person = new RealMPerson();
             person.setId(i);
             person.setEmail(dataFactory.getEmailAddress());
+            realm.insert(person);
         }
         realm.commitTransaction();
 
