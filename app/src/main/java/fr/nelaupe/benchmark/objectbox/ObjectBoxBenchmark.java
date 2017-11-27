@@ -27,7 +27,7 @@ public class ObjectBoxBenchmark implements BenchmarkExecutor {
     public long runInsertion(final int iteration) {
         final DataFactory dataFactory = new DataFactory();
 
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
 
         boxStore.runInTx(new Runnable() {
             @Override
@@ -40,7 +40,7 @@ public class ObjectBoxBenchmark implements BenchmarkExecutor {
                 }
             }
         });
-        return System.nanoTime() - start;
+        return System.currentTimeMillis() - start;
     }
 
     @Override

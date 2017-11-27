@@ -2,18 +2,19 @@
 
 ## Results
 
-RealM version 2.3.0<br/>
-ObjectBox 0.9.6<br/>
+RealM version 4.2.0<br/>
+ObjectBox 1.2.1<br/>
+GreenDAO 3.2.2<br/>
 
-Executed on Samsung Galaxy S3. Average on 50 iterations.<br/>
 Item inserted : 20K<br/>
-Time in MS. (Lower is better)<br/>
+(Lower is better) <br/>
 
-|        |  RealM |  ObjectBox |  For loop | Optimised For loop |
-|--------|--------|------------|-----------|--------------------|
-| Insert |  1530  |     **1227**   |    N/d    |         N/d        |
-| Search |     **10**  |     14     |     18    |          17        |
+|             |  RealM |  RealM (index) |  ObjectBox |  GreenDAO  |  For loop | Optimised For loop |
+|-------------|--------|----------------|------------|------------|-----------|--------------------|
+| Insert (ms) |  285   |      355       |      204   |     395    |    N/A    |         N/A        |
+| Search (ms) |  3.824 |     0.203      |    4.004   |   25.730   |    3.212  |        2.221       |
 
+## Old Results
 
 Executed on Samsung Galaxy S3. Average on 10 iterations.<br/>
 Item inserted : 50K<br/>
@@ -24,7 +25,7 @@ Time in MS. (Lower is better)<br/>
 | Insert |  3562  |     **2906**    |    N/d   |         N/d       |
 | Search |     **31**  |     45     |     49    |          46        |
 
-## Old Results
+
 
 Executed on Samsung Galaxy S3 with 10 iterations.<br/>
 RealM version 0.90.1<br/>

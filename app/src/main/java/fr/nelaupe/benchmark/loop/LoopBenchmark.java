@@ -32,7 +32,7 @@ public class LoopBenchmark implements BenchmarkExecutor {
 
         final DataFactory dataFactory = new DataFactory();
 
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
 
         for (int i = 0; i < iteration; i++) {
             GreenPerson person = new GreenPerson();
@@ -40,7 +40,7 @@ public class LoopBenchmark implements BenchmarkExecutor {
             database.add(person);
         }
 
-        return System.nanoTime() - start;
+        return System.currentTimeMillis() - start;
     }
 
     @Override

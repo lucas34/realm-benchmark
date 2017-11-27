@@ -36,7 +36,7 @@ public class GreenDaoBenchmark implements BenchmarkExecutor {
 
         final GreenPersonDao greenPersonDao = session.getGreenPersonDao();
 
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         session.runInTx(new Runnable() {
             @Override
             public void run() {
@@ -47,7 +47,7 @@ public class GreenDaoBenchmark implements BenchmarkExecutor {
                 }
             }
         });
-        return System.nanoTime() - start;
+        return System.currentTimeMillis() - start;
     }
 
     @Override

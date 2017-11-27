@@ -34,7 +34,7 @@ public class RealMBenchmarkIndexed implements BenchmarkExecutor {
     public long runInsertion(int iteration) {
         DataFactory dataFactory = new DataFactory();
 
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
 
         realm.beginTransaction();
         for (int i = 0; i < iteration; i++) {
@@ -45,7 +45,7 @@ public class RealMBenchmarkIndexed implements BenchmarkExecutor {
         }
         realm.commitTransaction();
 
-        return System.nanoTime() - start;
+        return System.currentTimeMillis() - start;
     }
 
     @Override
