@@ -32,7 +32,7 @@ public class LoopBenchmark implements BenchmarkExecutor {
 
         final DataFactory dataFactory = new DataFactory();
 
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
 
         for (int i = 0; i < iteration; i++) {
             GreenPerson person = new GreenPerson();
@@ -40,18 +40,18 @@ public class LoopBenchmark implements BenchmarkExecutor {
             database.add(person);
         }
 
-        return System.currentTimeMillis() - start;
+        return System.nanoTime() - start;
     }
 
     @Override
     public long runQuery(String query) {
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
 
         for (GreenPerson person : database) {
             person.getEmail().contains(query);
         }
 
-        return System.currentTimeMillis() - start;
+        return System.nanoTime() - start;
     }
 
     @Override

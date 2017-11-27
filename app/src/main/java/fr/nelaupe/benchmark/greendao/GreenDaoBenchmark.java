@@ -36,7 +36,7 @@ public class GreenDaoBenchmark implements BenchmarkExecutor {
 
         final GreenPersonDao greenPersonDao = session.getGreenPersonDao();
 
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
         session.runInTx(new Runnable() {
             @Override
             public void run() {
@@ -47,14 +47,14 @@ public class GreenDaoBenchmark implements BenchmarkExecutor {
                 }
             }
         });
-        return System.currentTimeMillis() - start;
+        return System.nanoTime() - start;
     }
 
     @Override
     public long runQuery(String query) {
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
         session.getGreenPersonDao().queryBuilder().where(GreenPersonDao.Properties.Email.like("%"+query+"%")).buildCursor().forCurrentThread().query().getCount();
-        return System.currentTimeMillis() - start;
+        return System.nanoTime() - start;
     }
 
     @Override

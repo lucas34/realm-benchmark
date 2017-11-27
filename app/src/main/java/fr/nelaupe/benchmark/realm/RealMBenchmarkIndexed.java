@@ -16,7 +16,7 @@ import io.realm.Realm;
  * Created by lucas
  * Date 26/03/15
  */
-public class RealMBenchmark implements BenchmarkExecutor {
+public class RealMBenchmarkIndexed implements BenchmarkExecutor {
 
     private Realm realm;
 
@@ -38,7 +38,7 @@ public class RealMBenchmark implements BenchmarkExecutor {
 
         realm.beginTransaction();
         for (int i = 0; i < iteration; i++) {
-            RealMPerson person = new RealMPerson();
+            RealMPersonIndexed person = new RealMPersonIndexed();
             person.setId(i);
             person.setEmail(dataFactory.getEmailAddress());
             realm.insert(person);

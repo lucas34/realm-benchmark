@@ -27,7 +27,7 @@ public class ObjectBoxBenchmark implements BenchmarkExecutor {
     public long runInsertion(final int iteration) {
         final DataFactory dataFactory = new DataFactory();
 
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
 
         boxStore.runInTx(new Runnable() {
             @Override
@@ -40,15 +40,15 @@ public class ObjectBoxBenchmark implements BenchmarkExecutor {
                 }
             }
         });
-        return System.currentTimeMillis() - start;
+        return System.nanoTime() - start;
     }
 
     @Override
     public long runQuery(String query) {
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
         Box<PersonObjectBox> box = boxStore.boxFor(PersonObjectBox.class);
         box.query().contains(PersonObjectBox_.email, query).build().count();
-        return System.currentTimeMillis() - start;
+        return System.nanoTime() - start;
     }
 
     @Override

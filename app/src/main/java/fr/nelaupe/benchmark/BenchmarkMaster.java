@@ -14,6 +14,7 @@ import fr.nelaupe.benchmark.loop.LoopBenchmark;
 import fr.nelaupe.benchmark.loop.LoopOptBenchmark;
 import fr.nelaupe.benchmark.objectbox.ObjectBoxBenchmark;
 import fr.nelaupe.benchmark.realm.RealMBenchmark;
+import fr.nelaupe.benchmark.realm.RealMBenchmarkIndexed;
 
 /**
  * Created with IntelliJ
@@ -36,6 +37,7 @@ public class BenchmarkMaster {
         runBenchmark(new LoopOptBenchmark());
         runBenchmark(new ObjectBoxBenchmark());
         runBenchmark(new RealMBenchmark());
+        runBenchmark(new RealMBenchmarkIndexed());
     }
 
     public void runBenchmark(BenchmarkExecutor benchmark) {
